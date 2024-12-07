@@ -181,6 +181,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "ansible-lint",
       },
     },
   },
