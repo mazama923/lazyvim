@@ -3,3 +3,4 @@
 -- Add any additional options here
 vim.g.ansible_vault_password_file = "~/.vault_password"
 vim.g.ansible_vault_no_unquote = 1
+vim.o.background = "light" -- ou "dark"
