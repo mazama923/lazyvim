@@ -5,7 +5,7 @@ Personal configuration for LazyVim
 ## Install
 
 ```bash
-git clone git@github.com:mazama923/lazyvim.git ~/.config/nvim && nvim
+git clone https://github.com/mazama923/lazyvim.git ~/.config/nvim && nvim
 ```
 
 ## Uninstall config
@@ -15,6 +15,7 @@ git clone git@github.com:mazama923/lazyvim.git ~/.config/nvim && nvim
 rm -rf ~/.config/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
 
 # Flatpak (linux)
 rm -rf ~/.var/app/io.neovim.nvim/config/nvim
