@@ -139,7 +139,8 @@ return {
         "tsx",
         "typescript",
       })
-    -- Désactivez la vérification SSL pour curl dans nvim-treesitter
+  init = function()
+    -- Désactivez la vérification SSL pour curl dès le début
     local ts_install = require("nvim-treesitter.install")
     ts_install.command_extra_args = ts_install.command_extra_args or {}
     ts_install.command_extra_args.curl = { "--insecure" }
