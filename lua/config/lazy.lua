@@ -58,7 +58,3 @@ require("lazy").setup({
     },
   },
 })
--- Disable ssl only for curl with Treesitter because it causes problems with the company's proxies
-require("nvim-treesitter.install").command_extra_args = {
-  curl = { "--insecure" },
-}
