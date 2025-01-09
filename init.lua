@@ -4,3 +4,5 @@ require("config.lazy")
 require('nvim-treesitter.install').command_extra_args = {
   curl = { '--insecure' },
 }
+-- DIsable mouse
+vim.opt.mouse = ""
