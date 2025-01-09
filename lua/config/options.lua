@@ -4,3 +4,4 @@
 vim.g.ansible_vault_password_file = "~/.vault_password"
 vim.g.ansible_vault_no_unquote = 1
 vim.o.background = "light" -- or "dark"
+vim.env.CURL_SSL_NO_VERIFY = "1"
