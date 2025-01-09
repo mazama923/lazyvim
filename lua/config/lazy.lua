@@ -14,11 +14,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Disable ssl only for curl with Treesitter because it causes problems with the company's proxies
-require('nvim-treesitter.install').command_extra_args = {
-  curl = { '--insecure' },
-}
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
