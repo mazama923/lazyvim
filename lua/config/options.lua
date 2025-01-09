@@ -4,6 +4,8 @@
 vim.g.ansible_vault_password_file = "~/.vault_password"
 vim.g.ansible_vault_no_unquote = 1
 vim.o.background = "light" -- or "dark"
+-- Disable mouse
+vim.opt.mouse = ""
 -- Copy & paste with mouse
 vim.g.clipboard = {
   name = 'myClipboard',
