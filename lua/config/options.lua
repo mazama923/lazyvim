@@ -18,3 +18,5 @@ vim.g.clipboard = {
     ['*'] = 'xclip -selection clipboard -o',
   },
 }
+-- Add system clipboard
+vim.opt.clipboard = "unnamedplus"
