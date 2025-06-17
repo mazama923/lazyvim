@@ -46,4 +46,15 @@ return {
       },
     },
   },
+  -- Completion out of the box
+  {
+    "saghen/blink.cmp",
+    opts = {
+      sources = {
+        per_filetype = {
+          codecompanion = { "codecompanion" },
+        },
+      },
+    },
+  },
 }
