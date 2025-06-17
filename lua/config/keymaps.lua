@@ -4,3 +4,4 @@
 
 vim.api.nvim_set_keymap("n", "<Leader>av", ":AnsibleVault<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<Leader>au", ":AnsibleUnvault<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<Leader>ac", ":CodeCompanionChat<CR>", { noremap = true, silent = true })

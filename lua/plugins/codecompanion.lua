@@ -7,6 +7,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
   },
+  -- Render the markdown in the chat buffer
   {
     "MeanderingProgrammer/render-markdown.nvim",
     ft = { "markdown", "codecompanion" },
@@ -21,6 +22,18 @@ return {
       },
     },
   },
+  -- Diff when using the inline assistant
+  {
+    "echasnovski/mini.diff",
+    config = function()
+      local diff = require("mini.diff")
+      diff.setup({
+        -- Disabled by default
+        source = diff.gen_source.none(),
+      })
+    end,
+  },
+  -- Copy images from your system clipboard into a chat buffer
   {
     "HakonHarnes/img-clip.nvim",
     opts = {
