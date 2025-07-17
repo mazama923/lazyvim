@@ -1,39 +1,44 @@
 return {
+  -- CodeCompanion + core dependencies
   {
     "olimorris/codecompanion.nvim",
-    opts = {},
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
     },
+    opts = {},
+    event = "VeryLazy", -- Load only when needed
   },
-  -- Render the markdown in the chat buffer
+
+  -- Render markdown in codecompanion and markdown buffers
   {
     "MeanderingProgrammer/render-markdown.nvim",
-    ft = { "markdown", "codecompanion" },
+    ft = { "markdown", "codecompanion" }, -- Only load for these filetypes
   },
+
+  -- Markview: markdown/codecompanion live preview
   {
     "OXY2DEV/markview.nvim",
-    lazy = false,
     opts = {
       preview = {
         filetypes = { "markdown", "codecompanion" },
-        ignore_buftypes = {},
       },
     },
+    ft = { "markdown", "codecompanion" }, -- Only load for these filetypes
   },
-  -- Diff when using the inline assistant
+
+  -- Mini.diff for in-line diff (recommended: lazy load on command)
   {
     "echasnovski/mini.diff",
     config = function()
-      local diff = require("mini.diff")
-      diff.setup({
-        -- Disabled by default
-        source = diff.gen_source.none(),
+      require("mini.diff").setup({
+        source = require("mini.diff").gen_source.none(),
       })
     end,
+    cmd = { "DiffviewOpen", "DiffviewClose" }, -- Load only on diff commands
   },
-  -- Copy images from your system clipboard into a chat buffer
+
+  -- Clipboard image pasting into chat buffer
   {
     "HakonHarnes/img-clip.nvim",
     opts = {
@@ -45,8 +50,10 @@ return {
         },
       },
     },
+    ft = "codecompanion", -- Load only for codecompanion filetype
   },
-  -- Completion out of the box
+
+  -- Completion with codecompanion-specific sources
   {
     "saghen/blink.cmp",
     opts = {
@@ -56,5 +63,6 @@ return {
         },
       },
     },
+    event = "InsertEnter", -- Load before editing
   },
 }
