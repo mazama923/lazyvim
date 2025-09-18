@@ -108,7 +108,7 @@ return {
 
   -- Mini.diff for in-line diff (recommended: lazy load on command)
   {
-    "echasnovski/mini.diff",
+    "nvim-mini/mini.diff",
     config = function()
       require("mini.diff").setup({
         source = require("mini.diff").gen_source.none(),
