@@ -87,6 +87,7 @@ return {
       },
     },
     event = "VeryLazy", -- Load only when needed
+    cmd = { "CodeCompanionChat", "CodeCompanionActions", "CodeCompanionToggle" },
   },
 
   -- Render markdown in codecompanion and markdown buffers
