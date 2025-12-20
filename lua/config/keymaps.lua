@@ -15,7 +15,7 @@ vim.keymap.set("n", "<Leader>au", ":AnsibleUnvault<CR>", { noremap = true, silen
 -- CodeCompanion keymaps
 -- ============================================================================
 -- Open CodeCompanion chat interface for AI-assisted coding
-vim.keymap.set("n", "<Leader>ac", ":CodeCompanionChat<CR>", { noremap = true, silent = true, desc = "CodeCompanion Chat" })
+-- vim.keymap.set("n", "<Leader>ac", ":CodeCompanionChat<CR>", { noremap = true, silent = true, desc = "CodeCompanion Chat" })
 
 -- ============================================================================
 -- Navigation keymaps (Insert and Normal modes)

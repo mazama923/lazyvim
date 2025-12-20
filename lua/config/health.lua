@@ -1,24 +1,24 @@
--- Configuration pour améliorer la santé de LazyVim
--- Ce fichier contient des optimisations pour éviter les problèmes courants
+-- Configuration to improve LazyVim's health
+-- This file contains optimizations to avoid common issues
 
--- Optimisations de performance
-vim.opt.updatetime = 200        -- Réduit le délai de mise à jour pour une meilleure réactivité
-vim.opt.timeoutlen = 300        -- Réduit le timeout des keymaps pour une meilleure expérience
-vim.opt.redrawtime = 1500       -- Augmente le temps de redraw pour les gros fichiers
+-- Performance optimizations
+vim.opt.updatetime = 200        -- Reduces update delay for better responsiveness
+vim.opt.timeoutlen = 300        -- Reduces keymap timeout for a better experience
+vim.opt.redrawtime = 1500       -- Increases redraw time for large files
 
--- Configuration de sécurité
-vim.opt.modeline = false        -- Désactive modeline pour éviter les problèmes de sécurité
-vim.opt.exrc = false           -- Désactive l'exécution automatique de .nvimrc locaux
+-- Security configuration
+vim.opt.modeline = false        -- Disables modeline to avoid security issues
+vim.opt.exrc = false           -- Disables automatic execution of local .nvimrc files
 
--- Optimisations mémoire
-vim.opt.hidden = true          -- Garde les buffers cachés au lieu de les fermer
-vim.opt.history = 1000         -- Limite l'historique des commandes
-vim.opt.undolevels = 1000      -- Limite les niveaux d'annulation
+-- Memory optimizations
+vim.opt.hidden = true          -- Keeps buffers hidden instead of closing them
+vim.opt.history = 1000         -- Limits the command history
+vim.opt.undolevels = 1000      -- Limits the undo levels
 
--- Configuration pour éviter les conflits de plugins
-vim.g.loaded_perl_provider = 0     -- Désactive le provider Perl si non utilisé
-vim.g.loaded_ruby_provider = 0     -- Désactive le provider Ruby si non utilisé
-vim.g.loaded_node_provider = 0     -- Désactive le provider Node si non utilisé
+-- Configuration to avoid plugin conflicts
+vim.g.loaded_perl_provider = 0     -- Disables Perl provider if unused
+vim.g.loaded_ruby_provider = 0     -- Disables Ruby provider if unused
+vim.g.loaded_node_provider = 0     -- Disables Node provider if unused
 
--- Configuration spécifique pour CodeCompanion
+-- Specific configuration for CodeCompanion
 vim.g.codecompanion_auto_save = true
